@@ -1,0 +1,5 @@
+sylius_ui:
+    events:
+        sylius.admin.product.update.javascripts:
+            blocks:
+                jinber_tinymce_javascript: "@JinberSyliusTinymcePlugin/admin/product/javascript.html.twig"

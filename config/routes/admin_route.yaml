@@ -1,0 +1,3 @@
+jinber_sylius_tinymce_admin:
+    resource: '../../src/Controller'
+    type: annotation

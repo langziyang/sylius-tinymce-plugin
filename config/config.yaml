@@ -1,0 +1,3 @@
+imports:
+    - { resource: 'admin/admin_ui.yaml' }
+    - { resource: 'shop/sylius_ui.yaml'}

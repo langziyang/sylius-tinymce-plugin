@@ -1,0 +1,41 @@
+<style>
+    .image_box {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(0,0,0,0.1);
+        justify-content: center;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .img-small {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .image_container {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+    }
+</style>
+<div class="image_container">
+    {% for file in finder %}
+        <div class="image_box">
+            <img src="{{ asset('/media/'~file.relativePathname ) }}" alt="" class="img img-small"
+                 onclick="chooseImage('{{ '/media/'~file.relativePathname }}')">
+        </div>
+    {% endfor %}
+</div>
+<script>
+    function chooseImage(image) {
+        window.parent.postMessage({
+            mceAction: 'insertImage',
+            message: {
+                src: image
+            }
+        })
+    }
+</script>

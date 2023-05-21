@@ -1,0 +1,9 @@
+sylius_ui:
+    events:
+        sylius.shop.product.show.tab_details:
+            blocks:
+                description: '@JinberSyliusTinymcePlugin/shop/Show/Tabs/Details/_description.html.twig'
+        
+        sylius.shop.product.show.right_sidebar:
+            blocks:
+                short_description: '@JinberSyliusTinymcePlugin/shop/Show/_shortDescription.html.twig' 
